@@ -1,0 +1,23 @@
+.home-page-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
+}
+
+.video {
+  position: relative;
+  width: 400px;
+  height: 600px;
+}
+
+.video + .video {
+  margin-top: 20px;
+}
+
+.info-vid {
+  position: absolute;
+  bottom: 20;
+}
