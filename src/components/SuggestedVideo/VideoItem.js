@@ -10,7 +10,8 @@ function VideoItem({ data }) {
     <div className={cx('home-page-layout')}>
       <Image className={cx('video')} video src={data.file_url} />
       <div className={cx('info-vid')}>
-        <span>{data.nickname}</span>
+        <strong className={cx('nickname')}>{data.nickname}</strong>
+        <span className={cx('description')}>{data.description}</span>
         <Image src={data.avatar} avatar />
       </div>
     </div>

@@ -13,6 +13,7 @@ const Image = forwardRef(
       src,
       alt,
       className,
+      children,
       fallback: customFallback = images.noImage,
       avatar = false,
       video = false,
@@ -35,17 +36,9 @@ const Image = forwardRef(
     });
 
     return video ? (
-      <video
-        width={width}
-        height={height}
-        className={classes}
-        ref={ref}
-        {...props}
-        onError={handleError}
-        controls
-        autoPlay
-      >
+      <video width={width} height={height} className={classes} ref={ref} {...props} onError={handleError} autoPlay>
         <source src={vid.noVid || src} />
+        {children}
       </video>
     ) : (
       <img className={classes} ref={ref} src={fallback || src} alt={alt} {...props} onError={handleError} />

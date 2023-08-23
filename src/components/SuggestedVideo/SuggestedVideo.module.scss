@@ -1,4 +1,5 @@
 .home-page-layout {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,16 +9,39 @@
 }
 
 .video {
-  position: relative;
   width: 400px;
   height: 600px;
 }
 
-.video + .video {
+.home-page-layout ~ .home-page-layout {
   margin-top: 20px;
 }
 
+.footer-vid {
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+}
+
 .info-vid {
+  display: flex;
   position: absolute;
-  bottom: 20;
+  bottom: 0;
+  margin-bottom: 10px;
+  color: var(--white);
+  text-shadow: 1px 1px 0 var(--text-color);
+  font-size: 1.6rem;
+  width: 300px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nickname {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 1.6rem;
+  width: 100%;
 }
